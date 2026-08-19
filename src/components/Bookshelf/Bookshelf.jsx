@@ -1,13 +1,7 @@
 import "./Bookshelf.css";
-const books = [
-    { id: 1, title: "Book One" },
-    { id: 2, title: "Book Two" },
-    { id: 3, title: "Book Three" },
-    { id: 4, title: "Book Four" },
-    { id: 5, title: "Book Five" },
-];
-
-function Bookshelf() {
+import BookCard from "../BookCard/BookCard";
+import books from "../../data/books";
+function Bookshelf({ onBookSelect }) {
     return (
         <section className="bookshelf">
             <div className="bookshelf-header">
@@ -17,9 +11,11 @@ function Bookshelf() {
 
             <div className="books">
                 {books.map((book) => (
-                    <div className="book" key={book.id}>
-                        {book.title}
-                    </div>
+                    <BookCard
+                        book={book}
+                        key={book.id}
+                        onSelect={onBookSelect}
+                    />
                 ))}
             </div>
 
