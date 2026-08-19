@@ -1,0 +1,65 @@
+.bookshelf {
+  padding: 80px 60px;
+  background-color: #fffaf2;
+}
+
+.bookshelf-header {
+  margin-bottom: 40px;
+}
+
+.bookshelf-header p {
+  color: #7a2638;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bookshelf-header h2 {
+  color: #2c211b;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.books {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  min-height: 260px;
+  padding: 0 30px 20px;
+  border-bottom: 18px solid #6b4632;
+  border-radius: 4px;
+}
+
+.book {
+  width: 120px;
+  height: 200px;
+  padding: 15px;
+  background-color: #7a2638;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.book:nth-child(2) {
+  height: 180px;
+  background-color: #8b634d;
+}
+
+.book:nth-child(3) {
+  height: 220px;
+  background-color: #5c2632;
+}
+
+.book:nth-child(4) {
+  height: 190px;
+  background-color: #a27b5c;
+}
+
+.book:nth-child(5) {
+  height: 210px;
+  background-color: #6b4632;
+}
