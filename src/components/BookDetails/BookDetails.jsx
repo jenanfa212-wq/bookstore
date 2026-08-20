@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import "./BookDetails.css";
 import books from "../../data/books";
-function BookDetails() {
+function BookDetails({ addToCart }) {
     const { id } = useParams();
     const book = books.find((book) => book.id === Number(id));
     console.log("Book ID:", id);
@@ -14,7 +14,9 @@ function BookDetails() {
                     <p>{book.author}</p>
                     <p>{book.price}</p>
 
-                    <button>Add to Cart</button>
+                    <button onClick={() => addToCart(book)}>
+                        Add to Cart
+                    </button>
                 </div>
             ) : (
                 <p>Book not found.</p>

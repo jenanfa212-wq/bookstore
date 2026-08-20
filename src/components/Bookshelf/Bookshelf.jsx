@@ -1,7 +1,10 @@
 import "./Bookshelf.css";
 import BookCard from "../BookCard/BookCard";
 import books from "../../data/books";
-function Bookshelf({ onBookSelect }) {
+function Bookshelf({ searchTerm }) {
+    const filteredBooks = books.filter((book) =>
+        book.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
     return (
         <section className="bookshelf">
             <div className="bookshelf-header">
@@ -10,11 +13,11 @@ function Bookshelf({ onBookSelect }) {
             </div>
 
             <div className="books">
-                {books.map((book) => (
+                {filteredBooks.map((book) => (
                     <BookCard
                         book={book}
                         key={book.id}
-                        onSelect={onBookSelect}
+
                     />
                 ))}
             </div>

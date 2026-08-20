@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ cart, searchTerm, setSearchTerm }) {
     return (
         <nav className="navbar">
             <h1 className="logo">My Bookstore</h1>
@@ -12,9 +13,16 @@ function Navbar() {
                 <a href="/about">About</a>
             </div>
             <div className="nav-actions">
-                <button>Search</button>
+                <input
+                    type="text"
+                    placeholder="Search books..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
                 <button>♡</button>
-                <button>🛒</button>
+                <Link to="/cart">
+                    🛒 {cart.reduce((total, book) => total + book.quantity, 0) || ""}
+                </Link>
             </div>
         </nav>
     );

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-function BookCard({ book, onSelect }) {
+function BookCard({ book }) {
     const navigate = useNavigate();
     return (
         <article
