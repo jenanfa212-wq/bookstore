@@ -1,3 +1,4 @@
+
 const books = [
     {
         id: 1,
@@ -6,6 +7,8 @@ const books = [
         price: "18",
         image: "/books/midnight-library.jpg",
         category: "Fiction",
+        isBestseller: true,
+        isNewArrival: false,
     },
     {
         id: 2,
@@ -13,7 +16,9 @@ const books = [
         author: "James Clear",
         price: "20",
         image: "/books/atomic-habits.jpg",
-         category: "Self-Developement",
+        category: "Self-Development",
+        isBestseller: true,
+        isNewArrival: true,
     },
     {
         id: 3,
@@ -21,7 +26,9 @@ const books = [
         author: "Paulo Coelho",
         price: "16",
         image: "/books/the-alchemist.jpg",
-         category: "Fiction",
+        category: "Fiction",
+        isBestseller: false,
+        isNewArrival: false,
     },
     {
         id: 4,
@@ -29,7 +36,9 @@ const books = [
         author: "Tara Westover",
         price: "22",
         image: "/books/educated.jpg",
-         category: "Memoir",
+        category: "Memoir",
+        isBestseller: false,
+        isNewArrival: true,
     },
     {
         id: 5,
@@ -37,7 +46,10 @@ const books = [
         author: "J.R.R. Tolkien",
         price: "19",
         image: "/books/the-hobbit.jpg",
-         category: "Fantasy",
+        category: "Fantasy",
+        isBestseller: true,
+        isNewArrival: false,
     },
 ];
+
 export default books;

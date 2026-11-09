@@ -1,0 +1,73 @@
+.wishlist {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+.wishlist h1 {
+    margin: 0 0 30px;
+    font-size: 32px;
+    color: #2c211b;
+}
+
+.wishlist > p {
+    color: #6b4632;
+}
+
+.wishlist-books {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    gap: 25px;
+    justify-content: start;
+}
+
+.wishlist-book {
+    width: 180px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: #fffaf2;
+    color: #2c211b;
+    border-radius: 4px;
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.wishlist-book img {
+    display: block;
+    width: 156px;
+    height: 190px;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border-radius: 2px;
+}
+
+.wishlist-book h2 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+.wishlist-book p {
+    margin: 0 0 8px;
+    font-size: 12px;
+    color: #6b4632;
+}
+
+@media (max-width: 850px) {
+    .wishlist-books {
+        grid-template-columns: repeat(3, 180px);
+    }
+}
+
+@media (max-width: 650px) {
+    .wishlist-books {
+        grid-template-columns: repeat(2, 180px);
+    }
+}
+
+@media (max-width: 430px) {
+    .wishlist-books {
+        grid-template-columns: 180px;
+        justify-content: center;
+    }
+}

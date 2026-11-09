@@ -8,6 +8,13 @@ import BookDetails from "./components/BookDetails/BookDetails";
 import Cart from "./components/Cart/Cart";
 import Categories from "./components/Categories/Categories";
 import books from "./data/books";
+import Wishlist from "./components/Wishlist/Wishlist";
+import Books from "./components/Books/Books";
+import About from "./components/About/About";
+import Discover from "./components/Discover/Discover";
+import YouthBox from "./components/YouthBox/YouthBox";
+import Contact from "./components/Contact/Contact";
+
 function App() {
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
@@ -17,6 +24,14 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
+  const [wishlist, setWishlist] = useState(() => {
+    const savedWishlist = localStorage.getItem("wishlist");
+
+    return savedWishlist ? JSON.parse(savedWishlist) : [];
+  });
+  useEffect(() => {
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+  }, [wishlist]);
   const addToCart = (book) => {
     setCart((currentCart) => {
       const existingBook = currentCart.find(
@@ -57,6 +72,7 @@ function App() {
         cart={cart}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
+        wishlist={wishlist}
       />
       <Routes>
         <Route
@@ -68,13 +84,21 @@ function App() {
             </main>
           }
         />
-        <Route
-          path="/categories"
-          element={<Categories books={books} />}
-        />
+        <Route path="/books" element={<Books />} />
+        <Route path="/discover" element={<Discover addToCart={addToCart} />} />
+        <Route path="/categories" element={<Categories books={books} />} />
+        <Route path="/youth-box" element={<YouthBox />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
         <Route
           path="/book/:id"
-          element={<BookDetails addToCart={addToCart} />}
+          element={
+            <BookDetails
+              addToCart={addToCart}
+              wishlist={wishlist}
+              setWishlist={setWishlist}
+            />
+          }
         />
         <Route
           path="/cart"
@@ -83,6 +107,15 @@ function App() {
               cart={cart}
               removeFromCart={removeFromCart}
               updateQuantity={updateQuantity}
+            />
+          }
+        />
+        <Route
+          path="/wishlist"
+          element={
+            <Wishlist
+              wishlist={wishlist}
+              setWishlist={setWishlist}
             />
           }
         />

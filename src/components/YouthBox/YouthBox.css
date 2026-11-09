@@ -1,0 +1,99 @@
+.youthbox-page {
+  background-color: #fffaf2;
+  color: #2c211b;
+}
+
+.youthbox-hero {
+  padding: 90px 60px 100px;
+  text-align: center;
+  background-color: #f7f2e8;
+}
+
+.page-label {
+  color: #7a2638;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin-bottom: 22px;
+}
+
+.youthbox-hero h1,
+.contact-hero h1 {
+  color: #2c211b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(48px, 7vw, 78px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -2px;
+  margin: 0 0 25px;
+}
+
+.page-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #6b4632;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.youthbox-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 36px;
+  padding: 80px 40px 100px;
+}
+
+.youthbox-card {
+  background-color: #ffffff;
+  border: 1px solid rgba(122, 38, 56, 0.12);
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 20px 30px rgba(44, 33, 27, 0.05);
+}
+
+.youthbox-card h2,
+.youthbox-card h3,
+.contact-card h2 {
+  margin: 0 0 18px;
+  color: #2c211b;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.youthbox-card p,
+.contact-card p {
+  color: #6b4632;
+  font-size: 16px;
+  line-height: 1.9;
+  margin: 0;
+}
+
+.youthbox-card.accent {
+  background-color: #f0e5d7;
+}
+
+.youthbox-card ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #2c211b;
+  line-height: 2;
+}
+
+@media (max-width: 700px) {
+  .youthbox-hero {
+    padding: 65px 22px 75px;
+  }
+
+  .youthbox-content {
+    grid-template-columns: 1fr;
+    padding: 60px 22px 70px;
+  }
+
+  .youthbox-card {
+    padding: 26px 22px;
+  }
+}

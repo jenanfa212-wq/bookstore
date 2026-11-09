@@ -1,0 +1,42 @@
+.about-page { background-color: #fffaf2; color: #2c211b; }
+/* Hero section */ .about-hero { padding: 90px 60px 100px; text-align: center; background-color: #f7f2e8; }
+.about-label { color: #7a2638; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; margin-bottom: 22px; }
+.about-hero h1 { color: #2c211b; font-family: Georgia, "Times New Roman", serif; font-size: clamp(48px, 7vw, 78px); font-weight: 500; line-height: 1.08; letter-spacing: -2px; margin: 0 0 25px; }
+.about-intro { max-width: 600px; margin: 0 auto; color: #6b4632; font-size: 17px; line-height: 1.9; }
+/* Story section */ .about-story { display: grid; grid-template-columns: 1.2fr 0.8fr; align-items: center; gap: 70px; max-width: 1100px; margin: 0 auto; padding: 90px 40px; }
+.about-story-content h2, .about-mission h2 { color: #2c211b; font-family: Georgia, "Times New Roman", serif; font-size: clamp(30px, 4vw, 42px); font-weight: 500; line-height: 1.25; margin: 0 0 22px; }
+.about-story-content > p:last-child, .about-mission > p:last-child { color: #6b4632; font-size: 16px; line-height: 1.9; }
+.about-quote { padding: 35px; background-color: #f0e5d7; border-left: 4px solid #7a2638; }
+.quote-mark { display: block; color: #7a2638; font-family: Georgia, "Times New Roman", serif; font-size: 64px; line-height: 0.8; margin-bottom: 18px; }
+.about-quote p { color: #2c211b; font-family: Georgia, "Times New Roman", serif; font-size: 23px; line-height: 1.6; }
+/* Mission section */ .about-mission { padding: 75px 30px 90px; background-color: #7a2638; text-align: center; }
+.about-mission .about-label { color: #f0d7c7; }
+.about-mission h2 { max-width: 750px; margin: 0 auto 22px; color: #fffaf2; }
+.about-mission > p:last-child { max-width: 650px; margin: 0 auto; color: #f0e5d7; }
+/* Responsive layout */ @media (max-width: 700px) { .about-hero { padding: 65px 22px 75px; }
+.about-hero h1 {
+    letter-spacing: -1px;
+}
+
+.about-intro {
+    font-size: 15px;
+}
+
+.about-story {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 60px 22px;
+}
+
+.about-quote {
+    padding: 28px;
+}
+
+.about-quote p {
+    font-size: 21px;
+}
+
+.about-mission {
+    padding: 60px 22px 70px;
+}
+}

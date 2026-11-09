@@ -1,27 +1,37 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar({ cart, searchTerm, setSearchTerm }) {
+function Navbar({ cart, wishlist }) {
+    const navigate = useNavigate();
+
     return (
         <nav className="navbar">
-            <h1 className="logo">My Bookstore</h1>
-
-            <div className="nav-links">
-                <a href="/">Home</a>
-                <a href="/books">Books</a>
-                <a href="/categories">Categories</a>
-                <a href="/about">About</a>
-            </div>
-            <div className="nav-actions">
-                <input
-                    type="text"
-                    placeholder="Search books..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+            <Link to="/">
+                <img
+                    src="/logo/brand-logo.jpg"
+                    alt="Nook & Novel"
+                    className="navbar-logo"
                 />
-                <button>♡</button>
+            </Link>
+            <div className="nav-links">
+                <Link to="/">Home</Link>
+                <Link to="/discover">Discover</Link>
+                <Link to="/categories">Categories</Link>
+                <Link to="/youth-box">Youth Box</Link>
+                <Link to="/contact">Contact</Link>
+                <Link to="/about">About</Link>
+            </div>
+
+            <div className="nav-actions">
+                <button type="button" onClick={() => navigate("/wishlist")}>
+                    ♡ {wishlist.length}
+                </button>
+
                 <Link to="/cart">
-                    🛒 {cart.reduce((total, book) => total + book.quantity, 0) || ""}
+                    🛒 {cart.reduce(
+                        (total, book) => total + book.quantity,
+                        0
+                    )}
                 </Link>
             </div>
         </nav>

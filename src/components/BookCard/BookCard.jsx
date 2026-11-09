@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
+
+import { Link } from "react-router-dom";
+import "./BookCard.css"
 function BookCard({ book }) {
-    const navigate = useNavigate();
     return (
-        <article
-            className="book"
-            onClick={() => navigate(`/book/${book.id}`)}
+        <Link
+            to={`/book/${book.id}`}
+            className="book book-link"
+            aria-label={`View details for ${book.title} by ${book.author}`}
         >
             <img src={book.image} alt={book.title} />
 
@@ -12,8 +14,8 @@ function BookCard({ book }) {
 
             <p>{book.author}</p>
 
-            <span>{book.price}</span>
-        </article>
+            <span>{book.price} LYD</span>
+        </Link>
     );
 }
 

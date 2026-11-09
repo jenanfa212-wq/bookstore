@@ -1,44 +1,47 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  background-color: #f7f2e8;
+     display: flex;
+      justify-content: space-between; 
+      align-items: center; gap: 30px; 
+      padding: 20px 5%;
+       background-color: #f7f2e8;
+        border-bottom: 1px solid #e8ded0; box-sizing: border-box; width: 100%; }
+.logo { flex-shrink: 0; color: #7a2638; font-size: 23px; font-weight: 700; text-decoration: none; letter-spacing: -0.5px; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { position: relative; text-decoration: none; color: #2c211b; font-size: 15px; font-weight: 500; transition: color 0.2s ease; }
+.nav-links a:hover { color: #7a2638; }
+.nav-links a:focus-visible, .logo:focus-visible { outline: 2px solid #7a2638; outline-offset: 5px; border-radius: 2px; }
+.nav-actions {
+     display: flex; 
+     align-items: center; 
+     gap: 18px; 
+     flex-shrink: 0; }
+.nav-actions button, .nav-actions a { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 8px 0; border: none; background: transparent; color: #2c211b; font-family: inherit; font-size: 15px; text-decoration: none; cursor: pointer; transition: color 0.2s ease; }
+.nav-actions button:hover, .nav-actions a:hover { color: #7a2638; }
+@media (max-width: 900px) { .navbar { flex-wrap: wrap; justify-content: center; gap: 18px 28px; padding: 18px 24px; }
+.nav-links {
+    gap: 20px;
 }
-
+}
+@media (max-width: 520px) { .navbar { flex-direction: column; gap: 16px; padding: 18px 16px; }
 .logo {
-  color: #7a2638;
-  font-size: 24px;
-  font-weight: bold;
+    font-size: 22px;
+}
+.navbar-logo {
+  width: 190px;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 .nav-links {
-  display: flex;
-  gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 18px;
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: #2c211b;
-  font-size: 16px;
-}
-
-.nav-links a:hover {
-  color: #7a2638;
+    font-size: 14px;
 }
 .nav-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    gap: 24px;
 }
-
-.nav-actions button {
-  border: none;
-  background: transparent;
-  color: #2c211b;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.nav-actions button:hover {
-  color: #7a2638;
-}
+} 
